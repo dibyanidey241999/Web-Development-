@@ -1,0 +1,713 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html,body
+{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo
+{
+    background: white;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-bar
+{
+    background: white;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.menu-bar ul
+{
+    display: inline-flex;   
+    list-style: none;
+    color: #21211f;  
+}
+
+.menu-bar ul li
+{
+    margin: 15px;
+    padding: 15px;
+}
+
+
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: #21211f;
+}
+
+.active, .menu-bar ul li:hover
+{
+    background: #db0707;
+    border-radius: 3px;
+}
+
+.menu-bar .fa
+{
+    margin-right: 8px;
+}
+
+.sub-menu-1
+{
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: #db0707;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: #b2ff00;
+}
+
+.fa-angle-right
+{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slider-frame
+{
+    overflow: hidden;
+    height: 400px;
+    justify-content: center;
+    margin-right: 55px;
+    margin-left: 55px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row; 
+    padding: auto;
+    position: absolute;
+}
+
+
+
+@-webkit-keyframes slide_animation
+{
+    
+    0%
+    {
+        left: 0px;
+    }
+    
+    10%
+    {
+        left: 0px;
+    }
+    
+    20%
+    {
+        left: 1200px;
+    }
+    
+    30%
+    {
+        left: 1200px;
+    }
+    
+    40%
+    {
+        left: 2400px;
+    }
+    
+    50%
+    {
+        left: 2400px;
+    }
+    
+    60%
+    {
+        left: 1200px;
+    }
+    
+    70%
+    {
+        left: 1200px;
+    }
+    
+     80%
+    {
+        left: 0px;
+    }
+    
+     90%
+    {
+        left: 0px;
+    }
+    
+     100%
+    {
+        left: 0px;
+    }
+    
+ 
+}
+
+
+.slide-images
+{
+    width: 3600px;
+    height: 800px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running; 
+}
+
+
+
+.img-container
+{
+    width: 1200px;
+    height: 800px;
+    position: relative;
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about-section
+{ 
+    margin-top: 500px;
+    margin-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    box-sizing: border-box;  
+}
+
+.blank
+{
+    margin: 40px;
+}
+
+
+.text
+{
+    font-size: 20px;  
+    text-align: justify;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.our-menu
+{
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.imageGallery
+{
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+
+
+.container
+{
+    margin: 70px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;  
+}
+
+
+
+
+
+.container .box
+{ 
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: white;
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+
+
+
+
+.container .box .imgBox
+{   
+    position: absolute;
+    overflow: hidden;
+}
+
+
+
+
+
+.container .box .imgBox img
+{ 
+    max-width: 100%;
+    transition: transform 2s;
+}
+
+
+
+
+
+.container .box:hover .imgBox img
+{
+    transform: scale(1.2);   
+}
+    
+    
+    
+    
+    
+    
+ 
+
+.container .box .details
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: #db0707;
+    transform: scaleY(0);
+    transition: transform .5s;   
+}
+    
+
+
+
+
+.container .box:hover .details
+{
+    transform: scaleY(1);
+}
+
+
+
+
+
+
+
+
+.container .box .details .content
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
+    
+
+
+
+
+.container .box .details .content h2
+{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #ff0;
+}
+
+
+
+
+
+
+.container .box .details .content p
+{
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.icons
+{
+    position: fixed;
+    top: 45%;
+    right: 0%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+
+.icons a
+{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 15px;
+    font-family: 'Oswald', sans-serif;
+    margin: 2px;
+    text-align: left;
+    border-radius: 50px 0px 0px 50px;
+    transform: translate(130px, 0px);
+    transition: all 0.5s;   
+}
+
+
+
+.icons a:hover
+{  
+    transform: translate(0px, 0px);   
+}
+
+
+
+.icons a i
+{
+    margin-right: 20px;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+
+
+.icons a:hover i
+{
+    transform: rotate(360deg);   
+}
+
+
+
+.icons a i.fa fa-facebook-f
+{
+    color: #2C80D3;
+}
+
+
+
+.icons a i.fa fa-instagram
+{   
+    color: #f2003c;
+}
+
+
+
+.icons a i.fa fa-whatsapp
+{   
+    color: #075e54;
+}
+
+
+
+.facebook
+{   
+    background-color: #2C80D3;
+    color: white;   
+}
+
+
+
+.instagram
+{
+    background-color:  #f2003c;
+    color: white;   
+}
+
+
+
+.whatsapp
+{
+    background-color: #075e54;
+    color: white;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1118px)
+{
+    .container .box
+    { 
+        width: 200px;
+        height: 200px;
+    }
+
+    .slider-frame
+    {
+        height: 350px;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+
+}
+
+
+
+
+
+
+@media (max-width: 900px)
+{
+    .container .box
+    { 
+        width: 200px;
+        height: 200px;
+    }
+
+    .slider-frame
+    {
+        height: 350px;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+
+}
+
+
+
+
+
+
+
+@media (max-width: 650px)
+{
+    .container .box
+    { 
+        width: 200px;
+        height: 200px;
+    }
+
+    .slider-frame
+    {
+        height: 350px;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+}
